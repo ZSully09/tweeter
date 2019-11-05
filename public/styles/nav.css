@@ -1,0 +1,18 @@
+nav {
+  top: 0;
+  height: 120px;
+  position: fixed;
+  width: 100%;
+  font-family: 'Source Sans Pro', sans-serif;
+  background: #4056a1;
+  color: #ffffff;
+  z-index: 1;
+  padding: 1.5em;
+}
+nav p {
+  margin: 0;
+  float: right;
+}
+nav span {
+  font-family: 'Bungee', cursive, sans-serif;
+}
