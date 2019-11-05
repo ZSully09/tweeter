@@ -29,8 +29,10 @@ main {
   padding-top: 0;
   margin-right: auto;
   margin-left: auto;
-  /* REMOVE ONCE TOP PADDING FIXED  */
-  background-color: red;
+}
+
+main p {
+  margin: 0;
 }
 
 /*
