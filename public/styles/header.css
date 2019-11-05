@@ -1,4 +1,22 @@
 header {
+  text-align: center;
   height: 400px;
   width: 100%;
+  background-color: #db7100;
+  background-image: url(http://www.transparenttextures.com/patterns/3px-tile.png);
+  color: #ffffff;
+  position: relative;
+}
+
+header img {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  top: 120px;
+}
+
+header h2 {
+  position: relative;
+  top: 65px;
+  font-family: 'Source Sans Pro', sans-serif;
 }
