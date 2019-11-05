@@ -23,6 +23,16 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+main {
+  text-align: center;
+  width: 90%;
+  padding-top: 0;
+  margin-right: auto;
+  margin-left: auto;
+  /* REMOVE ONCE TOP PADDING FIXED  */
+  background-color: red;
+}
+
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
