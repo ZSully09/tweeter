@@ -3,6 +3,10 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
+h2 {
+  font-weight: normal;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -32,6 +36,10 @@ main {
 }
 
 main p {
+  margin: 0;
+}
+
+main h2 {
   margin: 0;
 }
 
