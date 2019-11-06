@@ -30,3 +30,7 @@ span.counter {
   font-size: 20px;
   float: right;
 }
+
+span.counter.negative {
+  color: red;
+}
