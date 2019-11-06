@@ -16,6 +16,7 @@
 
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
@@ -36,19 +37,15 @@
       </div>
       <br />
       <div>
-        <h2>Your Name</h2>
+        <h2><b>Your</b> Name</h2>
       </div>
     </header>
 
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <h2>Compose Tweet</h2>
         <form action="http://localhost:8080/tweets" method="POST">
-          <textarea
-            name="text"
-            placeholder="What are you humming about?"
-          ></textarea>
+          <textarea name="text" placeholder="Saaaaaaaah dude?"></textarea>
           <input type="submit" value="Tweet" />
           <span class="counter">140</span>
         </form>
