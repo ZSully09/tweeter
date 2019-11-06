@@ -10,13 +10,20 @@
       href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:400,700,700i&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
 
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+
+    <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
@@ -33,9 +40,9 @@
     <!-- Top nav bar (fixed) -->
     <nav>
       <span>tweeter</span>
-      <p><b>Write</b> a new tweet</p>
+      <p>&#x21CA; <b>Write</b> a new tweet &#x21CA;</p>
     </nav>
-    <header>
+    <header class="header">
       <div>
         <img src="/images/profile-hex.png" />
       </div>
@@ -54,20 +61,64 @@
           <span class="counter">140</span>
         </form>
       </section>
-      <section>
-        <p>Tweeeeeeeeeeeet</p>
-        <p>Tweeeeeeeeeeeet</p>
-        <p>Tweeeeeeeeeeeet</p>
-        <p>Tweeeeeeeeeeeet</p>
-        <p>Tweeeeeeeeeeeet</p>
-        <p>Tweeeeeeeeeeeet</p>
-        <p>Tweeeeeeeeeeeet</p>
-        <p>Tweeeeeeeeeeeet</p>
-        <p>Tweeeeeeeeeeeet</p>
-        <p>Tweeeeeeeeeeeet</p>
-        <p>Tweeeeeeeeeeeet</p>
-        <p>Tweeeeeeeeeeeet</p>
-        <p>Tweeeeeeeeeeeet</p>
+      <section class="tweet-container">
+        <article class="tweet">
+          <header>
+            <p class="avatar-name">
+              <img src="/images/me.jpg" /> Zach Sullivan
+            </p>
+            <p class="handle">@ZSully09</p>
+          </header>
+          <div class="content">
+            BRAAAAP
+          </div>
+          <footer>
+            <p class="timestamp">10 days ago</p>
+            <p class="commands">
+              <i class="fa fa-flag-o"></i>
+              <i class="fa fa-retweet"></i>
+              <i class="fa fa-heart-o"></i>
+            </p>
+          </footer>
+        </article>
+        <article class="tweet">
+          <header>
+            <p class="avatar-name">
+              <img src="/images/me.jpg" /> Zach Sullivan
+            </p>
+            <p class="handle">@ZSully09</p>
+          </header>
+          <div class="content">
+            SKIIIAT
+          </div>
+          <footer>
+            <p class="timestamp">11 days ago</p>
+            <p class="commands">
+              <i class="fa fa-flag-o"></i>
+              <i class="fa fa-retweet"></i>
+              <i class="fa fa-heart-o"></i>
+            </p>
+          </footer>
+        </article>
+        <article class="tweet">
+          <header>
+            <p class="avatar-name">
+              <img src="/images/me.jpg" /> Zach Sullivan
+            </p>
+            <p class="handle">@ZSully09</p>
+          </header>
+          <div class="content">
+            First day at Lighthouse!
+          </div>
+          <footer>
+            <p class="timestamp">Oct 14, 2019</p>
+            <p class="commands">
+              <i class="fa fa-flag-o"></i>
+              <i class="fa fa-retweet"></i>
+              <i class="fa fa-heart-o"></i>
+            </p>
+          </footer>
+        </article>
       </section>
     </main>
   </body>
