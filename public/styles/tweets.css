@@ -1,0 +1,79 @@
+.tweet {
+  border-style: solid;
+  border-color: black;
+  border-width: 3px;
+  width: 100%;
+  height: 150px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  opacity: 0.8;
+}
+
+.tweet:hover {
+  box-shadow: 10px 10px lightblue;
+  opacity: 1;
+}
+
+article.tweet header {
+  font-size: 18px;
+  margin-top: 10px;
+  height: 20px;
+}
+
+article.tweet header p.avatar-name {
+  float: left;
+  margin-left: 18px;
+}
+
+article.tweet header p.avatar-name img {
+  float: left;
+  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+  top: 0;
+}
+
+article.tweet header p.handle {
+  float: right;
+  margin-right: 10px;
+  color: #f4f1ec;
+}
+
+article.tweet:hover header p.handle {
+  color: #989692;
+}
+
+article.tweet div.content {
+  text-align: left;
+  font-size: 18px;
+  margin-left: 18px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  height: 30px;
+}
+
+article.tweet footer {
+  height: 30px;
+  font-size: 12px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-bottom: 0;
+  border-left: 0;
+  border-right: 0;
+  border-top: 3px;
+  border-style: solid;
+  border-color: black;
+}
+
+article.tweet footer p.timestamp {
+  float: left;
+  margin-left: 8px;
+}
+
+article.tweet footer p.commands {
+  float: right;
+  margin-right: 8px;
+  font-size: 16px;
+}
