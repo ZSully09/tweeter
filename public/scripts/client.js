@@ -16,7 +16,6 @@
 //     text: 'If I have seen further it is by standing on the shoulders of giants'
 //   },
 //   created_at: 1461116232227
-// };
 
 const data = [
   {
@@ -49,7 +48,7 @@ const renderTweets = function(tweets) {
   // loops through tweets
   tweets.forEach(tweet => {
     // calls createTweetElement for each tweet
-    console.log(createTweetElement(tweet));
+    // console.log(createTweetElement(tweet));
     const $tweet = createTweetElement(tweet);
     $tweetContainer.append($tweet);
   });
@@ -117,7 +116,29 @@ const createTweetElement = function(tweet) {
 };
 
 $(document).ready(function() {
-  renderTweets(data);
+  $('form').on('submit', function(e) {
+    e.preventDefault();
+    const tweet = $(this).serialize();
+    console.log('form b', $(this));
+    console.log('form submitted', tweet);
+    $.ajax({
+      url: 'http://localhost:8080/tweets',
+      method: 'POST',
+      dataType: 'json',
+      data: tweet,
+      success: function(data) {
+        console.log('data is back :', data);
+        // data.forEach(post => {
+        //   $('.tweet-container').append(post);
+        // });
+      },
+      error: function(err) {
+        console.error('Error :', err);
+      }
+    });
+
+    renderTweets(data);
+  });
 });
 
 // $(document).ready(function() {
