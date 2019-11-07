@@ -1,13 +1,13 @@
-"use strict";
+'use strict';
 
-const userHelper    = require("../lib/util/user-helper")
+const userHelper = require('../lib/util/user-helper');
 
-const express       = require('express');
-const tweetsRoutes  = express.Router();
+const express = require('express');
+const tweetsRoutes = express.Router();
 
 module.exports = function(DataHelpers) {
-
-  tweetsRoutes.get("/", function(req, res) {
+  tweetsRoutes.get('/', function(req, res) {
+    console.log('inside get route');
     DataHelpers.getTweets((err, tweets) => {
       if (err) {
         res.status(500).json({ error: err.message });
@@ -17,13 +17,17 @@ module.exports = function(DataHelpers) {
     });
   });
 
-  tweetsRoutes.post("/", function(req, res) {
+  tweetsRoutes.post('/', function(req, res) {
+    console.log(req.body);
     if (!req.body.text) {
-      res.status(400).json({ error: 'invalid request: no data in POST body'});
+      console.log('this log');
+      res.status(400).json({ error: 'invalid request: no data in POST body' });
       return;
     }
 
-    const user = req.body.user ? req.body.user : userHelper.generateRandomUser();
+    const user = req.body.user
+      ? req.body.user
+      : userHelper.generateRandomUser();
     const tweet = {
       user: user,
       content: {
@@ -31,16 +35,16 @@ module.exports = function(DataHelpers) {
       },
       created_at: Date.now()
     };
-
-    DataHelpers.saveTweet(tweet, (err) => {
+    // console.log('what is tweet', tweet);
+    DataHelpers.saveTweet(tweet, err => {
+      console.log(err);
       if (err) {
         res.status(500).json({ error: err.message });
       } else {
-        res.status(201).send();
+        res.status(201).send(tweet);
       }
     });
   });
 
   return tweetsRoutes;
-
-}
+};
