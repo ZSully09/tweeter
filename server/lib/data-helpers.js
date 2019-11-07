@@ -9,7 +9,7 @@ module.exports = function makeDataHelpers(db) {
     // Saves a tweet to `db`
     saveTweet: function(newTweet, callback) {
       simulateDelay(() => {
-        console.log('inside delay', newTweet);
+        // console.log('inside delay', newTweet);
         db.tweets.push(newTweet);
         callback(null, true);
       });
