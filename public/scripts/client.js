@@ -124,19 +124,31 @@ const createTweetElement = function(tweet) {
 
 $(document).ready(function() {
   $('form').on('submit', function(e) {
+    const tweet = $('textarea').val();
     e.preventDefault();
-    const tweet = $(this).serialize();
+    // FORM VALIDATION
+    if (tweet.length === 0) {
+      return alert('Please input a valid tweet');
+    } else if (tweet.length > 140) {
+      return alert('You have exceeded the character limit');
+    }
+    const serializedForm = $(this).serialize();
+    // console.log(serializedForm);
+    // if (tweet.user.content.text === null)
+    // $('form').on('submit', function() {
+    // });
+    // console.log('TEST', tweet);
     // console.log('form b', $(this));
     // console.log('form submitted', tweet);
     $.ajax({
       url: '/tweets',
       method: 'POST',
       dataType: 'json',
-      data: tweet,
+      data: serializedForm,
       success: function(data) {
-        console.log(this);
-        console.log(tweet);
-        console.log('data is back :', data);
+        // console.log(this);
+        // console.log(tweet);
+        // console.log('data is back :', data);
         $('.tweet-container').prepend(createTweetElement(data));
       },
       error: function(err) {
