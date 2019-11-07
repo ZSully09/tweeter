@@ -8,6 +8,23 @@ nav {
   z-index: 1;
   padding: 1.5em;
 }
+nav button {
+  background-color: #4056a1;
+  color: #ffffff;
+  border-color: #4056a1;
+  float: right;
+  opacity: 0.8;
+}
+
+nav button:hover {
+  background-color: #4056a1;
+  color: #ffffff;
+  border-color: #4056a1;
+  float: right;
+  opacity: 1;
+  cursor: pointer;
+}
+
 nav p {
   margin: 0;
   float: right;
