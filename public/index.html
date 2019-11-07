@@ -35,13 +35,23 @@
       type="text/javascript"
       src="/scripts/composer-char-counter.js"
     ></script>
+    <script>
+      $(document).ready(function() {
+        $('#write-new-tweet').click(function() {
+          $('.new-tweet').toggle('slow');
+          $('textarea').focus();
+        });
+      });
+    </script>
   </head>
 
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
       <span>tweeter</span>
-      <p>&#x21CA; <b>Write</b> a new tweet &#x21CA;</p>
+      <button id="write-new-tweet">
+        <p>&#x21CA; <b>Write</b> a new tweet &#x21CA;</p>
+      </button>
     </nav>
     <header class="header">
       <div>
@@ -56,6 +66,7 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
+        <div class="error"></div>
         <form action="/tweets" method="POST">
           <textarea name="text" placeholder="Saaaaaaaah dude?"></textarea>
           <input type="submit" value="Tweet" />
