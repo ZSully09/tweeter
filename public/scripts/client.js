@@ -134,11 +134,11 @@ $(document).ready(function() {
 
     if (tweet.length === 0) {
       return $('div.error')
-        .text('!!! PlEaSe InPuT a VaLiD tWeEt !!!')
+        .text('!!! Please input a valid tweet !!!')
         .slideDown();
     } else if (tweet.length > 140) {
       return $('div.error')
-        .text('!!! yOu HaVe ExCeEdEd ThE cHaRaCtEr LiMiT !!!')
+        .text('!!! You have exceeded the character limit !!!')
         .slideDown();
     }
     const serializedForm = $(this).serialize();
