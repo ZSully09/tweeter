@@ -4,7 +4,7 @@
   border-width: 3px;
   width: 100%;
   height: 150px;
-  margin-top: 30px;
+  margin-top: 40px;
   margin-left: auto;
   margin-right: auto;
   display: block;
@@ -70,6 +70,7 @@ article.tweet footer {
 article.tweet footer p.timestamp {
   float: left;
   margin-left: 8px;
+  position: relative;
 }
 
 article.tweet footer p.commands {
