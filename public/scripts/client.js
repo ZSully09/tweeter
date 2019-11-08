@@ -166,6 +166,8 @@ $(document).ready(function() {
         // console.log(tweet);
         // console.log('data is back :', data);
         $('.tweet-container').prepend(createTweetElement(data));
+        $('textarea').val('');
+        $('.counter').text('140');
       },
       error: function(err) {
         console.error('Error :', err);
