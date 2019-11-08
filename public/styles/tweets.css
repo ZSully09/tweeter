@@ -38,11 +38,11 @@ article.tweet header p.avatar-name img {
 article.tweet header p.handle {
   float: right;
   margin-right: 10px;
-  color: #f4f1ec;
+  opacity: 0;
 }
 
 article.tweet:hover header p.handle {
-  color: #989692;
+  opacity: 1;
 }
 
 article.tweet div.content {
@@ -77,4 +77,9 @@ article.tweet footer p.commands {
   float: right;
   margin-right: 8px;
   font-size: 16px;
+  opacity: 0;
+}
+
+article.tweet:hover footer p.commands {
+  opacity: 1;
 }
