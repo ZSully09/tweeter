@@ -98,7 +98,11 @@ const createTweetElement = function(tweet) {
 
   const $timestamp = $('<p>')
     .addClass('timestamp')
-    .text(tweet.created_at);
+    .text(
+      moment(tweet.created_at)
+        .startOf('minute')
+        .fromNow()
+    );
 
   const $pCommands = $('<p>')
     .addClass('commands')
@@ -127,12 +131,20 @@ $(document).ready(function() {
     const tweet = $('textarea').val();
     e.preventDefault();
     // FORM VALIDATION
+
     if (tweet.length === 0) {
-      return alert('Please input a valid tweet');
+      return $('div.error')
+        .text('!!! PlEaSe InPuT a VaLiD tWeEt !!!')
+        .slideDown();
     } else if (tweet.length > 140) {
-      return alert('You have exceeded the character limit');
+      return $('div.error')
+        .text('!!! yOu HaVe ExCeEdEd ThE cHaRaCtEr LiMiT !!!')
+        .slideDown();
     }
     const serializedForm = $(this).serialize();
+    $('div.error')
+      .text('')
+      .slideUp();
     // console.log(serializedForm);
     // if (tweet.user.content.text === null)
     // $('form').on('submit', function() {
