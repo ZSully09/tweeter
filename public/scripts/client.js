@@ -145,6 +145,7 @@ $(document).ready(function() {
     $('div.error')
       .text('')
       .slideUp();
+    //  SMALL BUG --> AFTER ERROR AND HITTING TWEET AGAIN WITH SAME ERROR THE ERROR MESSAGE SLIDES UP
     // console.log(serializedForm);
     // if (tweet.user.content.text === null)
     // $('form').on('submit', function() {
