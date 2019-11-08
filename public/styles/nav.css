@@ -3,23 +3,25 @@ nav {
   position: fixed;
   width: 100%;
   font-family: 'Source Sans Pro', sans-serif;
-  background: #4056a1;
+  background-color: #db7100;
+  background-image: url(http://www.transparenttextures.com/patterns/3px-tile.png);
   color: #ffffff;
   z-index: 1;
   padding: 1.5em;
 }
 nav button {
-  background-color: #4056a1;
+  background-color: #db7100;
+  background-image: url(http://www.transparenttextures.com/patterns/3px-tile.png);
   color: #ffffff;
-  border-color: #4056a1;
+  border: 0;
   float: right;
   opacity: 0.8;
 }
 
 nav button:hover {
-  background-color: #4056a1;
+  background-color: #db7100;
   color: #ffffff;
-  border-color: #4056a1;
+  border: none;
   float: right;
   opacity: 1;
   cursor: pointer;
@@ -31,4 +33,19 @@ nav p {
 }
 nav span {
   font-family: 'Bungee', cursive, sans-serif;
+}
+
+@media (min-width: 1024px) {
+  nav {
+    background-color: #4056a1;
+    background-image: none;
+  }
+  nav button {
+    background-color: #4056a1;
+    border-color: #4056a1;
+    background-image: none;
+  }
+  nav button:hover {
+    background-color: #4056a1;
+  }
 }
