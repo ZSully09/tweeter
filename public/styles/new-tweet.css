@@ -11,6 +11,7 @@ main div.error {
   margin-top: 30px;
   height: 50px;
   color: red;
+  text-align: center;
   display: none;
 }
 
