@@ -44,7 +44,12 @@
 // ];
 
 const renderTweets = function(tweets) {
-  const $tweetContainer = $('.tweet-container');
+  const $tweetContainer = $('.tweet-container').empty();
+  tweets.sort((a, b) => {
+    if (a.created_at > b.created_at) return -1;
+    if (a.created_at < b.created_at) return 1;
+    return 0;
+  });
   // loops through tweets
   tweets.forEach(tweet => {
     // calls createTweetElement for each tweet
@@ -131,7 +136,6 @@ $(document).ready(function() {
     const tweet = $('textarea').val();
     e.preventDefault();
     // FORM VALIDATION
-
     if (tweet.length === 0) {
       return $('div.error')
         .text('!!! Please input a valid tweet !!!')
