@@ -2,6 +2,7 @@ main section.new-tweet {
   background-color: #f4f1ec;
   width: 100%;
   margin-bottom: 70px;
+  display: none;
 }
 
 main div.error {
