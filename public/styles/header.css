@@ -8,15 +8,27 @@ header.header {
   position: relative;
 }
 
-header img {
+div img {
   width: 200px;
   height: 200px;
   position: relative;
   top: 120px;
 }
 
-header h2 {
-  position: relative;
-  top: 65px;
+div h2 {
+  margin-top: 120px;
   font-family: 'Source Sans Pro', sans-serif;
+}
+
+@media (min-width: 1024px) {
+  header.header {
+    float: left;
+    width: 30%;
+    margin-top: 160px;
+    margin-left: 40px;
+  }
+
+  header div {
+    margin-top: -10%;
+  }
 }
