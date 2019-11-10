@@ -52,6 +52,7 @@ article.tweet div.content {
   margin-top: 30px;
   margin-bottom: 20px;
   height: 30px;
+  word-wrap: break-word;
 }
 
 article.tweet footer {
